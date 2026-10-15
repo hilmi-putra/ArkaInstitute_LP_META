@@ -3049,60 +3049,163 @@ iconify-icon {
   line-height: 1;
 }
 
+/* ---------- Alur (Biru & Kuning) ---------- */
 .flow {
-  background: #FFF9F6;
-  padding: 18px 14px 14px;
+  max-width: 980px;
+  margin: 30px auto 0;
+  background: linear-gradient(145deg, #0E2A6B 0%, #153A8A 100%);
+  color: #ffffff;
+  border-radius: 26px;
+  padding: 30px 24px 24px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(14, 42, 107, .18);
+  border: 1px solid rgba(255, 255, 255, .12);
+}
+
+.flow::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(71, 72, 245, 0.35) 0%, transparent 70%);
+  right: -80px;
+  top: -80px;
+  pointer-events: none;
+}
+
+.flow h2 {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -.02em;
+  margin: 0;
+}
+
+.flow > p {
+  color: rgba(255, 255, 255, .88);
+  position: relative;
+  z-index: 1;
+  font-size: .88rem;
+  margin-top: 6px;
 }
 
 .steps {
-  gap: 12px;
+  position: relative;
+  z-index: 1;
+  list-style: none;
+  margin-top: 20px;
+  display: grid;
+  gap: 0;
+  padding: 0;
 }
 
 .steps li {
+  position: relative;
   display: grid;
-  grid-template-columns: 34px 1fr;
-  gap: 10px;
-  background: #fff;
-  border: 1px solid #FED7C7;
-  border-radius: 12px;
-  padding: 14px;
-  box-shadow: 0 6px 14px rgba(229, 90, 36, .05);
-}
-
-.steps li::before {
-  display: none;
+  grid-template-columns: 40px 1fr;
+  gap: 14px;
+  padding-bottom: 20px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .steps li:last-child {
-  padding-bottom: 14px;
+  padding-bottom: 0;
+}
+
+.steps li::before {
+  content: "";
+  position: absolute;
+  left: 19px;
+  top: 40px;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #FFC62A, rgba(255, 198, 42, .2));
+  display: block;
+}
+
+.steps li:last-child::before {
+  display: none;
 }
 
 .steps .n {
-  width: 30px;
-  height: 30px;
-  font-size: .85rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #FFC62A;
+  color: #0E2A6B;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(255, 198, 42, .35);
+  flex-shrink: 0;
 }
 
 .steps h3 {
   font-size: 1.05rem;
   font-weight: 800;
   color: #ffffff;
+  margin: 0;
 }
 
 .steps p {
-  font-size: .88rem;
+  font-size: .86rem;
   color: rgba(255, 255, 255, .85);
-  margin-top: 3px;
+  margin-top: 4px;
+  line-height: 1.45;
 }
 
 .steps .time {
-  font-size: .74rem;
   display: inline-block;
-  margin-top: 6px;
+  margin-top: 8px;
+  background: rgba(255, 255, 255, .15);
+  border: 1px solid rgba(255, 198, 42, .4);
+  color: #FFC62A;
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-size: .74rem;
+  font-weight: 700;
 }
 
 .sop {
-  margin-top: 16px;
+  position: relative;
+  z-index: 1;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, .1);
+  border: 1px solid rgba(255, 255, 255, .2);
+  border-radius: 16px;
+  padding: 13px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  color: #ffffff;
+  font-size: .86rem;
+  font-weight: 600;
+}
+
+.sop a {
+  background: #FFC62A;
+  color: #0E2A6B;
+  font-weight: 800;
+  padding: 9px 15px;
+  border-radius: 12px;
+  font-size: .8rem;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: all .2s;
+  box-shadow: 0 4px 10px rgba(255, 198, 42, .3);
+}
+
+.sop a:hover {
+  background: #FFE66D;
+  transform: translateY(-1px);
 }
 
 @media (max-width:700px) {

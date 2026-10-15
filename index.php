@@ -58,7 +58,7 @@ $serverConfig = [
   -->
 
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css?v=3.1">
+  <link rel="stylesheet" href="assets/css/style.css?v=3.2">
 </head>
 <body class="bg-[#EFF4FB] font-sans text-slate-800 selection:bg-[#FFC62A] selection:text-[#0E2A6B]">
 
