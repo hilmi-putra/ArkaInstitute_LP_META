@@ -6,7 +6,7 @@
 
   <div class="svc-list">
     <!-- 1. Pengelolaan Jurnal -->
-    <details class="svc-item" name="layanan-acc">
+    <details class="svc-item svc-c1" name="layanan-acc">
       <summary class="svc-summary">
         <div class="svc-left">
           <span class="svc-ico"><iconify-icon icon="lucide:book-open-check" aria-hidden="true"></iconify-icon></span>
@@ -21,7 +21,7 @@
     </details>
 
     <!-- 2. Review & Similarity -->
-    <details class="svc-item" name="layanan-acc">
+    <details class="svc-item svc-c2" name="layanan-acc">
       <summary class="svc-summary">
         <div class="svc-left">
           <span class="svc-ico"><iconify-icon icon="lucide:file-check-2" aria-hidden="true"></iconify-icon></span>
@@ -36,7 +36,7 @@
     </details>
 
     <!-- 3. Percepatan LoA -->
-    <details class="svc-item" name="layanan-acc">
+    <details class="svc-item svc-c3" name="layanan-acc">
       <summary class="svc-summary">
         <div class="svc-left">
           <span class="svc-ico"><iconify-icon icon="lucide:zap" aria-hidden="true"></iconify-icon></span>
@@ -51,7 +51,7 @@
     </details>
 
     <!-- 4. Bayar Bertahap -->
-    <details class="svc-item" name="layanan-acc">
+    <details class="svc-item svc-c4" name="layanan-acc">
       <summary class="svc-summary">
         <div class="svc-left">
           <span class="svc-ico"><iconify-icon icon="lucide:credit-card" aria-hidden="true"></iconify-icon></span>
@@ -66,7 +66,7 @@
     </details>
 
     <!-- 5. Katalog Jurnal -->
-    <details class="svc-item" name="layanan-acc">
+    <details class="svc-item svc-c5" name="layanan-acc">
       <summary class="svc-summary">
         <div class="svc-left">
           <span class="svc-ico"><iconify-icon icon="lucide:layout-grid" aria-hidden="true"></iconify-icon></span>

@@ -13,7 +13,7 @@ $serverConfig = [
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Arka Institute | LoA 3 Hari, Legal, Tanpa Was-was</title>
   <meta name="description" content="Publikasi jurnal ilmiah untuk dosen, peneliti, dan mahasiswa. Percepatan LoA 3 hari, review 1x24 jam, legalitas resmi, bayar bertahap.">
-  <meta name="theme-color" content="#D1A14F">
+  <meta name="theme-color" content="#FF6B35">
   <meta property="og:title" content="Arka Institute | LoA 3 Hari, Legal, Tanpa Was-was">
   <meta property="og:description" content="2.900+ naskah sudah ditangani. Konsultasikan naskah Anda sekarang.">
   <meta property="og:type" content="website">
@@ -32,7 +32,17 @@ $serverConfig = [
     tailwind.config = {
       theme: {
         extend: {
-          colors: { arka: { ink: '#0E2A6B', sky: '#1FB5E6', blue: '#1565F5', yellow: '#FFC62A' } },
+          colors: {
+            arka: {
+              primary: '#FF6B35',
+              'primary-light': '#FF8A5B',
+              'primary-dark': '#E55A24',
+              secondary: '#4ECDC4',
+              accent: '#FFE66D',
+              ink: '#1E293B',
+              dark: '#1E293B'
+            }
+          },
           fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] }
         }
       }
@@ -48,9 +58,9 @@ $serverConfig = [
   -->
 
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css?v=2.1">
+  <link rel="stylesheet" href="assets/css/style.css?v=3.1">
 </head>
-<body class="bg-slate-200 font-sans text-slate-900 selection:bg-yellow-200">
+<body class="bg-[#EFF4FB] font-sans text-slate-800 selection:bg-[#FFC62A] selection:text-[#0E2A6B]">
 
   <!-- Sprite Ikon -->
   <?php include __DIR__ . '/components/icons.php'; ?>

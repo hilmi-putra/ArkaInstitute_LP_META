@@ -2,7 +2,29 @@
 <section class="hero" id="hero">
   <div class="hero-grid">
     <h1>LoA 3 Hari. Legal. Tanpa Was-was.</h1>
-    <div class="hero-art" aria-hidden="true"><img src="assets/journal/educenter.webp" alt="Cover jurnal Educenter"></div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="hero-art-wrap">
+        <img src="assets/journal/cocreation.webp" alt="Cover jurnal Co-Creation">
+        <!-- Badge 1: 3 Hari -->
+        <div class="art-badge b-time pop d3">
+          <span class="b-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="12" cy="12" r="9" fill="#FF8A1F" stroke="none"/><path d="M12 7v5l3 2" stroke="#fff"/></svg></span>
+          <b>3 Hari</b>
+        </div>
+        <!-- Badge 2: Legal -->
+        <div class="art-badge b-legal pop d1">
+          <span class="b-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="12" cy="12" r="9" fill="#19B36B" stroke="none"/><path d="m8.5 12 2.5 2.5 5-5" stroke="#fff"/></svg></span>
+          <b>Legal</b>
+        </div>
+        <!-- Badge 3: LoA Terbit -->
+        <div class="art-badge b-loa pop d2">
+          <b>LoA</b>
+          <span>Terbit</span>
+        </div>
+        <!-- Sparkles -->
+        <div class="art-sparkle s-left" aria-hidden="true">✦</div>
+        <div class="art-sparkle s-right" aria-hidden="true">✦</div>
+      </div>
+    </div>
   </div>
 
   <p class="hero-sub">2.900+ naskah sudah ditangani, kini giliran naskah Anda. Bayar bertahap, naskah aman, proses transparan.</p>

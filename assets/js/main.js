@@ -50,15 +50,15 @@ var JURNAL = [
    Bisa juga memakai tangkapan layar chat: tambahkan  gambar:"foto/testimoni1.jpg"  */
 var TESTIMONI = [
   {
-    contoh: true, nama: "Nama Pelanggan", peran: "Dosen \u2022 Nama Kampus", jurnal: "Educumer", bintang: 5, warna: "#1565F5",
+    contoh: true, nama: "Nama Pelanggan", peran: "Dosen \u2022 Nama Kampus", jurnal: "Educumer", bintang: 5, warna: "#FF6B35",
     teks: "Tulis kutipan asli di sini. Contoh gaya: prosesnya jelas dari awal, admin responsif, dan LoA keluar sesuai target."
   },
   {
-    contoh: true, nama: "Nama Pelanggan", peran: "Peneliti \u2022 Nama Institusi", jurnal: "Keynesia", bintang: 5, warna: "#0E9F86",
+    contoh: true, nama: "Nama Pelanggan", peran: "Peneliti \u2022 Nama Institusi", jurnal: "Keynesia", bintang: 5, warna: "#4ECDC4",
     teks: "Tulis kutipan asli di sini. Ceritakan hal spesifik yang paling membantu, misalnya pendampingan revisi."
   },
   {
-    contoh: true, nama: "Nama Pelanggan", peran: "Mahasiswa \u2022 Nama Kampus", jurnal: "Hexatech", bintang: 5, warna: "#D6336C",
+    contoh: true, nama: "Nama Pelanggan", peran: "Mahasiswa \u2022 Nama Kampus", jurnal: "Hexatech", bintang: 5, warna: "#FF8A5B",
     teks: "Tulis kutipan asli di sini. Contoh gaya: pembayaran bertahap sangat membantu, dan alurnya mudah diikuti."
   }
 ];
