@@ -1,8 +1,6 @@
-﻿---
+---
 deployment:
   tasks:
     - export DEPLOYPATH=/home/bhfcfyss/publikasi.arkainstitute.co.id/
-    - /bin/cp -rf index.php $DEPLOYPATH
-    - /bin/cp -rf components $DEPLOYPATH
-    - /bin/cp -rf assets $DEPLOYPATH
-    - /bin/cp -f .htaccess $DEPLOYPATH 2>/dev/null || true
+    - /bin/mkdir -p $DEPLOYPATH
+    - /bin/rsync -av --exclude='.git*' --exclude='.cpanel.yml' ./ $DEPLOYPATH
