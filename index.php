@@ -8,11 +8,13 @@ $serverConfig = [
 ?>
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Arka Institute | LoA 3 Hari, Legal, Tanpa Was-was</title>
-  <meta name="description" content="Publikasi jurnal ilmiah untuk dosen, peneliti, dan mahasiswa. Percepatan LoA 3 hari, review 1x24 jam, legalitas resmi, bayar bertahap.">
+  <meta name="description"
+    content="Publikasi jurnal ilmiah untuk dosen, peneliti, dan mahasiswa. Percepatan LoA 3 hari, review 1x24 jam, legalitas resmi, bayar bertahap.">
   <meta name="theme-color" content="#FF6B35">
   <meta property="og:title" content="Arka Institute | LoA 3 Hari, Legal, Tanpa Was-was">
   <meta property="og:description" content="2.900+ naskah sudah ditangani. Konsultasikan naskah Anda sekarang.">
@@ -23,7 +25,8 @@ $serverConfig = [
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
   <!-- Tailwind CSS & Iconify -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -50,16 +53,30 @@ $serverConfig = [
   </script>
   <script>window.ARKA_SERVER_CONFIG = <?= json_encode($serverConfig, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>;</script>
 
-  <!-- META PIXEL: tempel kode pixel Anda di sini, lalu ganti YOUR_PIXEL_ID.
+  <!-- Meta Pixel Code -->
   <script>
-  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init','YOUR_PIXEL_ID');fbq('track','PageView');
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1796140671659880');
+    fbq('track', 'PageView');
   </script>
-  -->
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1796140671659880&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
 
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css?v=3.2">
 </head>
+
 <body class="bg-[#EFF4FB] font-sans text-slate-800 selection:bg-[#FFC62A] selection:text-[#0E2A6B]">
 
   <!-- Sprite Ikon -->
@@ -116,4 +133,5 @@ $serverConfig = [
   <!-- Client-side Logic Scripts -->
   <script src="assets/js/main.js?v=2.1"></script>
 </body>
+
 </html>

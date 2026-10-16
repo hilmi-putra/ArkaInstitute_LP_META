@@ -42,7 +42,7 @@ var JURNAL = [
   { n: "Nautical", b: "Teknologi", c: ["#0369A1", "#082F49"], i: "assets/journal/nautical.webp" },
   { n: "Florone", b: "Kesehatan & Sains", c: ["#15803D", "#14532D"], i: "assets/journal/florona.webp" },
   { n: "Historia", b: "Sosial & Humaniora", c: ["#4D7C0F", "#365314"], i: "assets/journal/histeria.webp" },
-  { n: "Ecopus / WoS", b: "Internasional", c: ["#D97706", "#92400E"], i: "assets/journal/scopus.webp" }
+  { n: "Scopus / WoS", b: "Internasional", c: ["#D97706", "#92400E"], i: "assets/journal/scopus.webp" }
 ];
 
 /* TESTIMONI: ganti dengan testimoni ASLI pelanggan (nama dan izin tampil dari yang bersangkutan).
@@ -71,7 +71,7 @@ var SEGMEN = {
   ],
   peneliti: [
     { tag: "Riset layak terbit", t: "Pengelolaan jurnal langsung", d: "Naskah ditangani dari draf sampai terbit resmi dengan DOI aktif.", l: ["Alur transparan 4 tahap", "Publish dan DOI"] },
-    { tag: "Jalur internasional", t: "Ecopus / WoS", d: "Tersedia jalur jurnal internasional di katalog. Tanyakan kecocokan naskah Anda.", l: ["Konsultasi kecocokan naskah", "Pendampingan revisi"] },
+    { tag: "Jalur internasional", t: "Scopus / WoS", d: "Tersedia jalur jurnal internasional di katalog. Tanyakan kecocokan naskah Anda.", l: ["Konsultasi kecocokan naskah", "Pendampingan revisi"] },
     { tag: "Reputasi terjaga", t: "Legalitas bisa diperiksa", d: "NIB resmi dan alamat kantor jelas, sehingga Anda tenang menyerahkan naskah.", l: ["NIB 1103220012668", "Pembayaran bertahap"] }
   ],
   mahasiswa: [
