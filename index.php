@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 $serverConfig = [
   'waNumber' => getenv('ARKA_WA_NUMBER') ?: '6281110000298',
-  'deadline' => getenv('ARKA_DEADLINE') ?: '2026-10-31T23:59:00+07:00',
+  'deadline' => getenv('ARKA_DEADLINE') ?: 'daily',
 ];
 ?>
 <!DOCTYPE html>
@@ -131,7 +131,7 @@ $serverConfig = [
   <?php include __DIR__ . '/components/modal-voucher.php'; ?>
 
   <!-- Client-side Logic Scripts -->
-  <script src="assets/js/main.js?v=2.1"></script>
+  <script src="assets/js/main.js?v=2.3"></script>
 </body>
 
 </html>

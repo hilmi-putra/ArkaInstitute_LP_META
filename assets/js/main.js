@@ -5,12 +5,12 @@ var CONFIG = {
   // Nomor WhatsApp admin, format internasional tanpa + dan tanpa spasi. Contoh: "6281234567890"
   waNumber: (window.ARKA_SERVER_CONFIG && window.ARKA_SERVER_CONFIG.waNumber) || "6281110000298",
 
-  // URUGENSI: isi hanya jika batas/kuota ini benar-benar berlaku.
+  // URGENSI: "daily" untuk hitung mundur harian (selalu 1 hari & reset setiap hari).
   // Kosongkan deadline ("") untuk menyembunyikan strip promo dan kotak hitung mundur.
-  deadline: (window.ARKA_SERVER_CONFIG && window.ARKA_SERVER_CONFIG.deadline) || "2026-10-31T23:59:00+07:00",
-  promoText: "KUOTA REVIEW BATCH OKTOBER",
-  promoSub: "Daftar sebelum 31 Oktober 2026",
-  urgTitle: "Pendaftaran batch Oktober segera ditutup",
+  deadline: (window.ARKA_SERVER_CONFIG && window.ARKA_SERVER_CONFIG.deadline) || "daily",
+  promoText: "KUOTA REVIEW BATCH HARI INI",
+  promoSub: "Slot terbatas, daftar hari ini untuk amankan kuota",
+  urgTitle: "Pendaftaran batch ini segera ditutup",
   urgSub: "Naskah yang masuk lebih awal diproses lebih dulu.",
 
   // DISKON: isi sesuai penawaran yang benar-benar Anda berikan. aktif:false untuk mematikan.
@@ -105,10 +105,26 @@ function bindWA(root) {
 
 /* ---------- Diskon, urgensi, hitung mundur ---------- */
 var DK = CONFIG.diskon || {};
-var DL = CONFIG.deadline ? new Date(CONFIG.deadline).getTime() : NaN;
+
+function getDailyDeadline() {
+  var now = new Date();
+  // Target: akhir hari ini (23:59:59) sehingga menghitung sisa waktu hari ini, dan otomatis reset setiap tengah malam
+  var target = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59, 999);
+  return target.getTime();
+}
+
+function resolveDeadline() {
+  if (CONFIG.deadline === "daily" || !CONFIG.deadline) {
+    return getDailyDeadline();
+  }
+  return new Date(CONFIG.deadline).getTime();
+}
+
+var isDailyMode = (CONFIG.deadline === "daily" || !CONFIG.deadline);
+var DL = resolveDeadline();
 var timerAktif = !isNaN(DL) && DL > Date.now();
 /* Diskon otomatis mati bila batas waktu sudah lewat */
-var diskonAktif = !!DK.aktif && (!CONFIG.deadline || timerAktif);
+var diskonAktif = !!DK.aktif && (isDailyMode || timerAktif);
 
 function voucherText() {
   return (diskonAktif && DK.kode) ? " Saya ingin memakai kode voucher " + DK.kode + "." : "";
@@ -179,10 +195,18 @@ function salin(t, done) {
   if (!timerAktif) return;
   var ids = ["cdD", "cdH", "cdM", "cdS", "mD", "mH", "mM", "mS"];
   function tick() {
+    if (isDailyMode) {
+      DL = getDailyDeadline();
+    }
     var r = DL - Date.now();
     if (r <= 0) {
-      promo.hidden = true; urg.hidden = true; diskonAktif = false;
-      closeModal(); clearInterval(t); return;
+      if (isDailyMode) {
+        DL = getDailyDeadline();
+        r = DL - Date.now();
+      } else {
+        promo.hidden = true; urg.hidden = true; diskonAktif = false;
+        closeModal(); clearInterval(t); return;
+      }
     }
     var s = Math.floor(r / 1000);
     var v = [pad(Math.floor(s / 86400)), pad(Math.floor(s % 86400 / 3600)), pad(Math.floor(s % 3600 / 60)), pad(s % 60)];
