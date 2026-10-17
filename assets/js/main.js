@@ -305,6 +305,7 @@ setupLead("popForm", "popInput", "popMsg", "Anda akan diarahkan ke WhatsApp admi
 /* ---------- Testimonial ---------- */
 (function () {
   var rail = $("#testiRail"), sec = $("#testimoni");
+  if (rail && rail.children.length > 0) return; // Menggunakan card testimoni asli dari components/testimoni.php
   var items = TESTIMONI.filter(function (t) { return t && (t.teks || t.gambar); });
   if (!items.length) { sec.hidden = true; return; }
   rail.innerHTML = items.map(function (t) {
